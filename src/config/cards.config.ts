@@ -1,0 +1,38 @@
+export const CARDS = [
+  {
+    title: "total earnings",
+    titleNumb: 12.96,
+    counterNumb: 89.23,
+    signNumb: "+",
+    statusNumb: "green",
+    link: "View net earnings",
+    icon: "dollar",
+  },
+  {
+    title: "orders",
+    titleNumb: 4.75,
+    counterNumb: 128,
+    signNumb: "-",
+    statusNumb: "red",
+    link: "View all orders",
+    icon: "dollar",
+  },
+  {
+    title: "refunds",
+    titleNumb: 2.34,
+    counterNumb: 12,
+    signNumb: "+",
+    statusNumb: "green",
+    link: "View refunds",
+    icon: "dollar",
+  },
+  {
+    title: "conversion rate",
+    titleNumb: 0,
+    counterNumb: 3.18,
+    signNumb: "",
+    statusNumb: "gray",
+    link: "View analytics",
+    icon: "dollar",
+  },
+] as const;

@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Backgrounds */
+  --color-DF-surface: #fff;
+  --color-DF-surface-dark: #121215;
+  --color-DF-bg-icon: #3577f11f;
+  --color-DF-bg-icon-dark: #31363c;
+  --color-DF-bg-light: #f3f3f9;
+  --color-DF-bg-dark: #212529;
+  --color-DF-main-bg-dark: #1a1d21;
+
+  /* Borders */
+  --color-DF-outline: oklch(87.2% 0.01 258.338);
+  --color-DF-outline-dark: oklch(21% 0.034 264.665);
+
+  /* top-navbar */
+  --color-DF-nav-surface-dark: #292e32;
+  --color-DF-nav-search-bg-light: #f3f3f9;
+  --color-DF-nav-search-bg-dark: #202328;
+  --color-DF-nav-search-text-light: #495057;
+  --color-DF-nav-search-text-dark: #fff;
+  --height-DF-nav-top: 70px;
+  --height-DF-nav-icons: calc(
+    var(--height-DF-nav-top) * var(--DF-nav-icon-ratio)
+  );
+  --width-DF-nav-icons: calc(
+    var(--height-DF-nav-top) * var(--DF-nav-icon-ratio)
+  );
+  --height-DF-nav-icons-shadow: calc(var(--height-DF-nav-icons) + 20px);
+  --width-DF-nav-icons-shadow: calc(var(--width-DF-nav-icons) + 20px);
+
+  /* sidebar */
+  --width-DF-sb-left: 70px;
+  --spacing-DF-sb-top: var(--height-DF-nav-top);
+  --shadow-DF-sb-right: 0 2px 4px #0f223a1f;
+  --height-DF-sb-logo: calc(var(--width-DF-sb-left) * var(--DF-sb-logo-ratio));
+  --width-DF-sb-logo: calc(var(--width-DF-sb-left) * var(--DF-sb-logo-ratio));
+  --color-DF-sb-item-inactive: #7c7f90;
+  --color-DF-sb-item-active-dark: #fff;
+  --shadow-DF-sb-submenu-sw:
+    4px 4px 6px -1px rgba(0, 0, 0, 0.1), 4px 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+  /* text */
+  --color-DF-nav-primary: #878a99;
+  --color-DF-heading: #ced4da;
+  --color-DF-secondary: #878a99;
+  --color-DF-hover-btn: #fff;
+
+  /* pages */
+  --color-DF-green: #0ab39c;
+  --color-DF-blue: #299cdb;
+  --color-DF-danger: #f06548;
+  --color-DF-green-bg: #0ab39c26;
+  --color-DF-blue-bg: #299cdb26;
+  --color-DF-dark-bg-subtle: #25282c;
+  --color-DF-light-bg-subtle: #f9fbfc;
+
+  /* card */
+  --shadow-DF-card: 0 1px 2px #38414a26;
+
+  --spacing-DF-nav-side-isopen: 250px;
+  --color-DF-nav-overlay: #21252959;
+}
+
+:root {
+  --DF-sb-logo-ratio: 0.3142867;
+  --DF-nav-icon-ratio: 0.3142867;
+  --DF-nav-side-offset: var(--spacing-DF-nav-side-isopen);
+}
+
+.transition-bg-primary {
+  @apply transition-colors duration-1000 ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-pop {
+    animation: pop 200ms ease-out;
+  }
+}
