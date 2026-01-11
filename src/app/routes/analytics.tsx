@@ -1,3 +1,5 @@
+import { Analitics } from "../../features/analytics/Analitics";
+
 export const Analytics = () => {
-  return <h1>Analytics route</h1>;
+  return <Analitics />;
 };

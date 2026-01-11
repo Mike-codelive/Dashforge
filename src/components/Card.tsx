@@ -45,7 +45,7 @@ export const Card = ({
   const statusBgClass = statusNumb ? STATUS_BG[statusNumb] : "";
 
   return (
-    <div className="shadow-DF-card bg-DF-surface dark:bg-DF-bg-dark rounded-md">
+    <div className="card-shadow bg-DF-surface dark:bg-DF-bg-dark rounded-md">
       <div className="space-y-4 p-4">
         <div className="flex items-center justify-between">
           <p className="text-DF-muted text-sm uppercase">{title}</p>
