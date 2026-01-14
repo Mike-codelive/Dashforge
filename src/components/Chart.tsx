@@ -1,16 +1,42 @@
-import { type ChartData, type ChartOptions, type ChartType } from "chart.js";
-import { Chart as ReactChart } from "react-chartjs-2";
+import React from "react";
+import ApexChart from "react-apexcharts";
+import type { ApexOptions } from "apexcharts";
 
-type ChartProps<TType extends ChartType> = {
-  type: TType;
-  data: ChartData<TType>;
-  options?: ChartOptions<TType>;
+type ChartProps = {
+  type: "line" | "area" | "bar" | "donut" | "radialBar" | "pie";
+  series: ApexAxisChartSeries | ApexNonAxisChartSeries;
+  options?: ApexOptions;
+  height?: number;
 };
 
-export function Chart<TType extends ChartType>({
-  type,
-  data,
-  options,
-}: ChartProps<TType>) {
-  return <ReactChart type={type} data={data} options={options} />;
-}
+export const Chart = React.memo(
+  ({ type, series, options, height = 300 }: ChartProps) => {
+    const mergedOptions: ApexOptions = {
+      chart: {
+        type,
+        height,
+        toolbar: { show: false },
+        zoom: { enabled: true },
+        animations: { enabled: true },
+      },
+      stroke: { curve: "smooth" },
+      dataLabels: { enabled: false },
+      grid: {
+        borderColor: "rgba(255,255,255,0.05)",
+      },
+      tooltip: { theme: "dark" },
+      ...options,
+    };
+
+    return (
+      <ApexChart
+        type={type}
+        series={series}
+        options={mergedOptions}
+        height={height}
+      />
+    );
+  },
+);
+
+Chart.displayName = "Chart";

@@ -1,77 +1,50 @@
-import type { ChartOptions } from "chart.js";
+import type { ApexOptions } from "apexcharts";
 
-export const revenueChartOptions: ChartOptions<"bar" | "line"> = {
-  responsive: true,
-  maintainAspectRatio: false,
+export const revenueOptions: ApexOptions = {
+  chart: {
+    type: "line",
+    toolbar: { show: false },
+    redrawOnParentResize: true,
+    redrawOnWindowResize: true,
+  },
 
-  plugins: {
-    legend: {
-      display: true,
-      position: "bottom",
+  xaxis: {
+    categories: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+  },
 
-      labels: {
-        usePointStyle: true,
-        pointStyle: "circle",
-        boxWidth: 8,
-        boxHeight: 8,
-        padding: 16,
-        color: "#94a3b8",
-        font: {
-          size: 12,
-          weight: 500,
-        },
-      },
+  stroke: {
+    width: [3, 3, 3],
+    curve: "smooth",
+  },
 
-      onHover: (event) => {
-        const target = event?.native?.target as HTMLCanvasElement | undefined;
-        if (target) {
-          target.style.cursor = "pointer";
-        }
-      },
-
-      onLeave: (event) => {
-        const target = event?.native?.target as HTMLCanvasElement | undefined;
-        if (target) {
-          target.style.cursor = "default";
-        }
-      },
-    },
-
-    tooltip: {
-      mode: "index",
-      intersect: false,
-    },
-
-    zoom: {
-      pan: {
-        enabled: true,
-        mode: "x",
-      },
-      zoom: {
-        wheel: {
-          enabled: true,
-        },
-        pinch: {
-          enabled: true,
-        },
-        mode: "x",
-      },
+  plotOptions: {
+    bar: {
+      columnWidth: "45%",
+      borderRadius: 6,
     },
   },
 
-  scales: {
-    x: {
-      grid: {
-        display: false,
-      },
-    },
-    y: {
-      grid: {
-        color: "rgba(148,163,184,0.15)",
-      },
-      ticks: {
-        callback: (value) => `$${value}k`,
-      },
+  colors: ["#f59e0b", "#4f46e5", "#22c55e"],
+
+  legend: {
+    position: "top",
+    labels: {
+      colors: "#9ca3af",
     },
   },
+
+  dataLabels: { enabled: false },
 };

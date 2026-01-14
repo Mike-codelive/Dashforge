@@ -1,6 +1,6 @@
 import { Chart } from "../../../components/Chart";
-import { revenueChartData } from "../data/revenueChartData";
-import { revenueChartOptions } from "../data/revenueChartOptions";
+import { revenueSeries } from "../data/revenueChartData";
+import { revenueOptions } from "../data/revenueChartOptions";
 
 export const Revenue = () => {
   return (
@@ -28,9 +28,10 @@ export const Revenue = () => {
       </div>
       <div className="h-[370px] p-4">
         <Chart
-          type="bar"
-          data={revenueChartData}
-          options={revenueChartOptions}
+          type="line"
+          series={revenueSeries}
+          options={revenueOptions}
+          height={350}
         />
       </div>
     </div>
