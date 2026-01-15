@@ -40,7 +40,7 @@ export const revenueOptions: ApexOptions = {
   colors: ["#f59e0b", "#4f46e5", "#22c55e"],
 
   legend: {
-    position: "top",
+    position: "bottom",
     labels: {
       colors: "#9ca3af",
     },

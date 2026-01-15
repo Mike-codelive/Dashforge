@@ -1,12 +1,12 @@
 import { Card } from "../../components/Card";
 import { CARDS } from "../../config/cards.config";
 import { AddCircle, PulseLine } from "../../icons";
-// import { BestSelling } from "./sections/BestSelling";
-// import { RecentOrders } from "./sections/RecentOrders";
+import { BestSelling } from "./sections/BestSelling";
 import { Revenue } from "./sections/Revenue";
-// import { SalesByLocation } from "./sections/SalesByLocation";
-// import { StoreVisits } from "./sections/StoreVisits";
-// import { TopSellers } from "./sections/TopSellers";
+import { SalesByLocation } from "./sections/SalesByLocation";
+import { StoreVisits } from "./sections/StoreVisits";
+import { TopSellers } from "./sections/TopSellers";
+import { RecentOrders } from "./sections/RecentOrders";
 
 export const Dashboard = () => {
   return (
@@ -37,12 +37,12 @@ export const Dashboard = () => {
       </div>
       <div className="mb-5 gap-6 md:flex">
         <Revenue />
-        {/* <SalesByLocation /> */}
+        <SalesByLocation />
       </div>
-      {/* <BestSelling />
+      <BestSelling />
       <TopSellers />
       <StoreVisits />
-      <RecentOrders /> */}
+      <RecentOrders />
     </section>
   );
 };

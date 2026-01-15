@@ -1,38 +1,30 @@
-import type { ChartOptions, TooltipItem } from "chart.js";
+import type { EChartsOption, MapSeriesOption } from "echarts";
 
-type ChoroplethRaw = {
-  value: number;
-};
-
-export const salesByLocationOptions: ChartOptions<"choropleth"> = {
-  responsive: true,
-  maintainAspectRatio: false,
-
-  scales: {
-    projection: {
-      axis: "x",
-      projection: "equalEarth",
-    },
-    color: {
-      axis: "x",
-      quantize: 5,
-      legend: {
-        position: "bottom",
-      },
-    },
+export const salesByLocationOptions: EChartsOption & {
+  series: MapSeriesOption[];
+} = {
+  tooltip: {
+    trigger: "item",
+    formatter: "{b}: {c}",
   },
 
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      callbacks: {
-        label: (ctx: TooltipItem<"choropleth">) => {
-          const raw = ctx.raw as ChoroplethRaw;
-          return `Sales: $${raw.value.toLocaleString()}`;
-        },
-      },
-    },
+  visualMap: {
+    min: 0,
+    max: 10000,
+    left: "left",
+    bottom: 20,
+    calculable: true,
   },
+
+  series: [
+    {
+      type: "map",
+      map: "world",
+      roam: true,
+      emphasis: {
+        label: { show: false },
+      },
+      data: [],
+    },
+  ],
 };

@@ -5,7 +5,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store/store.ts";
 import { router } from "./app/router";
-import "./lib/chart";
+import "./lib/echarts/maps";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

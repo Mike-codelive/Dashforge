@@ -1,6 +1,6 @@
 import { Chart } from "../../../components/Chart";
-import { storeVisitsData } from "../data/storeVisitsData";
 import { storeVisitsOptions } from "../data/storeVisitsOptions";
+import { storeVisitsApexSeries } from "../data/storeVisitsApexSeries";
 import { storeVisitsLegend } from "../data/storeVisitsLegend";
 import { VisitSourceRow } from "../components/VisitSourceRow";
 
@@ -14,9 +14,10 @@ export const StoreVisits = () => {
       <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2">
         <div className="relative h-[260px]">
           <Chart
-            type="doughnut"
-            data={storeVisitsData}
+            type="donut"
             options={storeVisitsOptions}
+            series={storeVisitsApexSeries}
+            height={260}
           />
         </div>
 

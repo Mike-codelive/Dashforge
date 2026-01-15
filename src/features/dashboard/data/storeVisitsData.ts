@@ -1,12 +1,7 @@
-import type { ChartData } from "chart.js";
-
-export const storeVisitsData: ChartData<"doughnut"> = {
-  labels: ["Direct", "Referral", "Social", "Email", "Other"],
-  datasets: [
-    {
-      data: [44, 25, 15, 10, 6],
-      backgroundColor: ["#4f46e5", "#22c55e", "#f59e0b", "#ef4444", "#94a3b8"],
-      borderWidth: 0,
-    },
-  ],
-};
+export const storeVisitsData = [
+  { value: 44, name: "Direct" },
+  { value: 25, name: "Referral" },
+  { value: 15, name: "Social" },
+  { value: 10, name: "Email" },
+  { value: 6, name: "Other" },
+];
