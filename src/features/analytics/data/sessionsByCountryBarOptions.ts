@@ -1,39 +1,51 @@
-import type { ChartOptions } from "chart.js";
+import type { ApexOptions } from "apexcharts";
 
-export const sessionsByCountryBarOptions: ChartOptions<"bar"> = {
-  responsive: true,
-  maintainAspectRatio: false,
-  indexAxis: "y",
+export const sessionsByCountryBarOptions: ApexOptions = {
+  chart: {
+    type: "bar",
+    toolbar: { show: false },
+  },
 
-  plugins: {
-    legend: {
-      display: false,
+  plotOptions: {
+    bar: {
+      borderRadius: 6,
+      columnWidth: "45%",
     },
-    tooltip: {
-      callbacks: {
-        label: (ctx) => {
-          const value = ctx.raw as number;
-          return `Sessions: ${value.toLocaleString()}`;
-        },
+  },
+
+  xaxis: {
+    categories: ["USA", "Germany", "UK", "Canada", "France"],
+    labels: {
+      style: {
+        colors: "#9ca3af",
+        fontSize: "12px",
+      },
+    },
+    axisBorder: { show: false },
+    axisTicks: { show: false },
+  },
+
+  yaxis: {
+    labels: {
+      style: {
+        colors: "#9ca3af",
+        fontSize: "12px",
       },
     },
   },
 
-  scales: {
-    x: {
-      ticks: {
-        // beginAtZero: true,
-        callback: (val) => val.toLocaleString(),
-        align: "center",
-      },
-      grid: {
-        display: false,
-      },
-    },
-    y: {
-      grid: {
-        display: false,
-      },
+  grid: {
+    borderColor: "rgba(255,255,255,0.05)",
+    padding: {
+      left: 8,
+      right: 8,
+      bottom: 0,
     },
   },
+
+  tooltip: {
+    theme: "dark",
+  },
+
+  colors: ["#4f46e5"],
 };

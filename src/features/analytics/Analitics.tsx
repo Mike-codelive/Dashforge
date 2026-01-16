@@ -15,7 +15,7 @@ export const Analitics = () => {
       <LiveUsersByCountry />
       <SessionsByCountries />
       <AudienceMetrics />
-      <div className="gap-4 md:flex">
+      <div className="gap-4 md:flex md:items-start">
         <UsersByDevice />
         <TopReferralsPages />
         <TopPages />

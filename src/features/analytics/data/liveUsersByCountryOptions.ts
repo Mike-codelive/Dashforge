@@ -1,35 +1,34 @@
-import type { ChartOptions } from "chart.js";
+import type { EChartsOption } from "echarts";
 
-export const liveUsersByCountryOptions: ChartOptions<"choropleth"> = {
-  responsive: true,
-  maintainAspectRatio: false,
+export const liveUsersByCountryOptions: EChartsOption = {
+  tooltip: {
+    trigger: "item",
+    formatter: "{b}: {c}",
+  },
 
-  scales: {
-    projection: {
-      axis: "x",
-      projection: "equalEarth",
+  visualMap: {
+    min: 0,
+    max: 1500,
+    calculable: false,
+    orient: "horizontal",
+    left: "center",
+    bottom: 10,
+    inRange: {
+      color: ["#1f2933", "#4f46e5"],
     },
-    color: {
-      axis: "x",
-      quantize: 5,
-      legend: {
-        position: "bottom",
-        align: "top",
-      },
+    textStyle: {
+      color: "#9ca3af",
     },
   },
 
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      callbacks: {
-        label: (ctx) => {
-          const value = (ctx.raw as { value?: number })?.value ?? 0;
-          return `Users: ${value.toLocaleString()}`;
-        },
+  series: [
+    {
+      type: "map",
+      map: "world",
+      roam: false,
+      emphasis: {
+        label: { show: false },
       },
     },
-  },
+  ],
 };

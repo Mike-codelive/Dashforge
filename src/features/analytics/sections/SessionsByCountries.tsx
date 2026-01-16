@@ -12,8 +12,9 @@ export const SessionsByCountries = () => {
       <div className="h-80 p-4">
         <Chart
           type="bar"
-          data={sessionsByCountryBarData}
+          series={sessionsByCountryBarData}
           options={sessionsByCountryBarOptions}
+          height={300}
         />
       </div>
     </div>

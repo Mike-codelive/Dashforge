@@ -11,30 +11,32 @@ export const UsersByDevice = () => {
       <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2">
         <div className="relative h-[220px]">
           <Chart
-            type="doughnut"
-            data={{
-              labels: usersByDevice.map((d) => d.label),
-              datasets: [
-                {
-                  data: usersByDevice.map((d) => d.value),
-                  backgroundColor: usersByDevice.map((d) => d.color),
-                  borderWidth: 0,
-                  hoverOffset: 6,
-                },
-              ],
-            }}
+            type="donut"
+            height={220}
+            series={usersByDevice.map((d) => d.value)}
             options={{
-              responsive: true,
-              maintainAspectRatio: false,
-              cutout: "70%",
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  callbacks: {
-                    label: (ctx) => `${ctx.label}: ${ctx.raw}%`,
+              labels: usersByDevice.map((d) => d.label),
+              colors: usersByDevice.map((d) => d.color),
+
+              legend: { show: false },
+              dataLabels: { enabled: false },
+
+              plotOptions: {
+                pie: {
+                  donut: {
+                    size: "70%",
                   },
+                  expandOnClick: true,
                 },
               },
+
+              tooltip: {
+                y: {
+                  formatter: (value: number) => `${value}%`,
+                },
+              },
+
+              stroke: { width: 0 },
             }}
           />
         </div>

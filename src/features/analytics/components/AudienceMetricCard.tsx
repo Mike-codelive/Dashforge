@@ -21,38 +21,46 @@ export const AudienceMetricCard = ({ metric }: Props) => {
           {metric.change}%
         </span>
       </div>
+
       <p className="mt-2 text-2xl font-semibold">{metric.value}</p>
 
       <div className="mt-4 h-[60px]">
         <Chart
           type={metric.chartType}
-          data={{
-            labels: metric.chartData.map((_, i) => i.toString()),
-            datasets: [
-              {
-                data: metric.chartData,
-                borderColor: "#4f46e5",
-                backgroundColor:
-                  metric.chartType === "bar"
-                    ? "#4f46e5"
-                    : "rgba(79,70,229,0.15)",
-                fill: metric.chartType === "line",
-                tension: 0.4,
-                pointRadius: 0,
-                barThickness: 6,
-              },
-            ],
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: { enabled: false },
+          height={60}
+          series={[
+            {
+              name: metric.title,
+              data: metric.chartData,
             },
-            scales: {
-              x: { display: false },
-              y: { display: false },
+          ]}
+          options={{
+            chart: {
+              sparkline: { enabled: true },
+            },
+
+            stroke: {
+              curve: "smooth",
+              width: 2,
+            },
+
+            fill:
+              metric.chartType === "line" ? { opacity: 0.25 } : { opacity: 1 },
+
+            colors: ["#4f46e5"],
+
+            tooltip: {
+              enabled: false,
+            },
+
+            xaxis: {
+              labels: { show: false },
+              axisBorder: { show: false },
+              axisTicks: { show: false },
+            },
+
+            yaxis: {
+              show: false,
             },
           }}
         />
