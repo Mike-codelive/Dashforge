@@ -10,6 +10,7 @@ import { Speed } from "./Speed";
 import { Apps } from "./Apps";
 import { ArrowUpward } from "./ArrowUpward";
 import { Dollar } from "./Dollar";
+import { ArrowCircleUp } from "./ArrowCircleUp";
 
 export {
   Sun,
@@ -24,4 +25,5 @@ export {
   Apps,
   ArrowUpward,
   Dollar,
+  ArrowCircleUp,
 };

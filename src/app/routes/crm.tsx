@@ -1,3 +1,5 @@
-export const Crm = () => {
-  return <h1>Crm route</h1>;
+import { Crm } from "../../features/crm/Crm";
+
+export const CrmRoute = () => {
+  return <Crm />;
 };

@@ -7,7 +7,7 @@ import { TopReferralsPages } from "./sections/TopReferralsPages";
 import { TrialUpgrade } from "./sections/TrialUpgrade";
 import { UsersByDevice } from "./sections/UsersByDevice";
 
-export const Analitics = () => {
+export const Analytics = () => {
   return (
     <>
       <TrialUpgrade />

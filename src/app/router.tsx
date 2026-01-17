@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Analytics } from "./routes/analytics";
-import { Calendar } from "./routes/calendar";
-import { Chat } from "./routes/chat";
-import { Crm } from "./routes/crm";
+import { AnalyticsRoute } from "./routes/analytics";
+import { CalendarRoute } from "./routes/calendar";
+import { ChatRoute } from "./routes/chat";
+import { CrmRoute } from "./routes/crm";
 import { DashboardRoute } from "./routes/dashboard";
 import { RootLayout } from "./routes/root";
 
@@ -12,10 +12,10 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <DashboardRoute /> },
-      { path: "analytics", element: <Analytics /> },
-      { path: "crm", element: <Crm /> },
-      { path: "calendar", element: <Calendar /> },
-      { path: "chat", element: <Chat /> },
+      { path: "analytics", element: <AnalyticsRoute /> },
+      { path: "crm", element: <CrmRoute /> },
+      { path: "calendar", element: <CalendarRoute /> },
+      { path: "chat", element: <ChatRoute /> },
     ],
   },
 ]);

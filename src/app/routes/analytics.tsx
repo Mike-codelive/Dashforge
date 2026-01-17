@@ -1,5 +1,5 @@
-import { Analitics } from "../../features/analytics/Analitics";
+import { Analytics } from "../../features/analytics/Analitics";
 
-export const Analytics = () => {
-  return <Analitics />;
+export const AnalyticsRoute = () => {
+  return <Analytics />;
 };
