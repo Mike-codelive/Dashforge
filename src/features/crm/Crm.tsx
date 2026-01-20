@@ -1,8 +1,10 @@
 import { BalanceOverview } from "./sections/BalanceOverview";
 import { DealStatus } from "./sections/DealStatus";
 import { DealTypeRadar } from "./sections/DealTypeRadar";
+import { MyTasks } from "./sections/MyTasks";
 import { SalesForecast } from "./sections/SalesForecast";
 import { TopStats } from "./sections/TopStats";
+import { UpcomingActivities } from "./sections/UpcomingActivities";
 
 export const Crm = () => {
   return (
@@ -14,6 +16,8 @@ export const Crm = () => {
       </div>
       <BalanceOverview />
       <DealStatus />
+      <MyTasks />
+      <UpcomingActivities />
     </>
   );
 };
