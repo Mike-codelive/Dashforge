@@ -1,4 +1,5 @@
 import { BalanceOverview } from "./sections/BalanceOverview";
+import { DealStatus } from "./sections/DealStatus";
 import { DealTypeRadar } from "./sections/DealTypeRadar";
 import { SalesForecast } from "./sections/SalesForecast";
 import { TopStats } from "./sections/TopStats";
@@ -12,6 +13,7 @@ export const Crm = () => {
         <DealTypeRadar />
       </div>
       <BalanceOverview />
+      <DealStatus />
     </>
   );
 };
