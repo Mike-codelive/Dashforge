@@ -3,7 +3,15 @@ import ApexChart from "react-apexcharts";
 import type { ApexOptions } from "apexcharts";
 
 type ChartProps = {
-  type: "line" | "area" | "bar" | "donut" | "radialBar" | "pie" | "radar";
+  type:
+    | "line"
+    | "area"
+    | "bar"
+    | "donut"
+    | "radialBar"
+    | "pie"
+    | "radar"
+    | "candlestick";
   series: ApexAxisChartSeries | ApexNonAxisChartSeries;
   options?: ApexOptions;
   height?: number;

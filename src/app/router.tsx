@@ -4,6 +4,7 @@ import { CalendarRoute } from "./routes/calendar";
 import { ChatRoute } from "./routes/chat";
 import { CrmRoute } from "./routes/crm";
 import { DashboardRoute } from "./routes/dashboard";
+import { CryptoRoute } from "./routes/crypto";
 import { RootLayout } from "./routes/root";
 
 export const router = createBrowserRouter([
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: "crm", element: <CrmRoute /> },
       { path: "calendar", element: <CalendarRoute /> },
       { path: "chat", element: <ChatRoute /> },
+      { path: "crypto", element: <CryptoRoute /> },
     ],
   },
 ]);
