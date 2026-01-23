@@ -11,7 +11,7 @@ export const MarketGraph = () => {
   ];
 
   return (
-    <div className="card-shadow bg-DF-surface dark:bg-DF-bg-dark rounded-md">
+    <div className="card-shadow bg-DF-surface dark:bg-DF-bg-dark mb-6 rounded-md">
       <div className="border-b border-white/5 p-4">
         <h4 className="font-semibold">Market Graph</h4>
       </div>
