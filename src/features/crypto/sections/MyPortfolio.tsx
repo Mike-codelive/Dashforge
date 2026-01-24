@@ -9,7 +9,7 @@ export const MyPortfolio = () => {
         <h4 className="font-semibold">My Portfolio</h4>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
         <div className="relative h-[260px]">
           <Chart
             type="donut"
