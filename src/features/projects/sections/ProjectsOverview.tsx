@@ -11,7 +11,7 @@ export const ProjectsOverview = () => {
   ];
 
   return (
-    <div className="card-shadow bg-DF-surface dark:bg-DF-bg-dark rounded-md">
+    <div className="card-shadow bg-DF-surface dark:bg-DF-bg-dark mb-6 rounded-md">
       <div className="flex items-center justify-between border-b border-white/5 p-4">
         <h4 className="font-semibold">Projects Overview</h4>
       </div>
