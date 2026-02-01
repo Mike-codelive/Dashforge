@@ -22,7 +22,7 @@ export const TaskItem = ({ task, onToggle }: Props) => {
       <label htmlFor={checkboxId} className="flex flex-col gap-0.5">
         <span
           className={`text-sm font-medium transition ${
-            task.completed ? "text-DF-muted line-through" : "text-white"
+            task.completed ? "text-DF-muted line-through" : ""
           }`}
         >
           {task.title}

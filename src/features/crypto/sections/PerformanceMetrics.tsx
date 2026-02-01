@@ -7,7 +7,7 @@ export const PerformanceMetrics = () => {
       {performanceMetricsData.map((metric) => (
         <div
           key={metric.title}
-          className="bg-DF-surface dark:bg-DF-bg-dark border-DF-border/10 overflow-hidden rounded-lg border shadow-lg transition-all duration-300 hover:shadow-xl dark:border-white/5"
+          className="bg-DF-surface dark:bg-DF-bg-dark overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
         >
           <div className="p-6">
             <p className="text-DF-muted mb-1 text-sm font-medium">
