@@ -64,7 +64,7 @@ export const RecentActivity = () => {
 
       <div className="px-5 py-3 text-center">
         <button className="text-DF-primary hover:text-DF-primary-dark text-sm font-medium transition-colors">
-          View All Activities →
+          View All Activities
         </button>
       </div>
     </div>
