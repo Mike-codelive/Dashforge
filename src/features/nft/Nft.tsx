@@ -1,4 +1,5 @@
 import { Marketplace } from "./sections/Marketplace";
+import { NftMark } from "./sections/NftMark";
 import { NftRevenueOverview } from "./sections/NftRevenueOverview";
 
 export const Nft = () => {
@@ -8,6 +9,7 @@ export const Nft = () => {
         <Marketplace />
         <NftRevenueOverview />
       </div>
+      <NftMark />
     </>
   );
 };
