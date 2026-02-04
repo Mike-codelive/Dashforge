@@ -1,6 +1,7 @@
 import { Marketplace } from "./sections/Marketplace";
 import { NftMark } from "./sections/NftMark";
 import { NftRevenueOverview } from "./sections/NftRevenueOverview";
+import { TopArtworks } from "./sections/TopArtworks";
 
 export const Nft = () => {
   return (
@@ -10,6 +11,7 @@ export const Nft = () => {
         <NftRevenueOverview />
       </div>
       <NftMark />
+      <TopArtworks />
     </>
   );
 };
