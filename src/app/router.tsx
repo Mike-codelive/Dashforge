@@ -8,6 +8,7 @@ import { DashboardRoute } from "./routes/dashboard";
 import { ProjectsRoute } from "./routes/projects";
 import { RootLayout } from "./routes/root";
 import { NftRoute } from "./routes/nft";
+import { JobRoute } from "./routes/job";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: "crypto", element: <CryptoRoute /> },
       { path: "projects", element: <ProjectsRoute /> },
       { path: "nft", element: <NftRoute /> },
+      { path: "job", element: <JobRoute /> },
     ],
   },
 ]);
