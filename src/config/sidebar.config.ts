@@ -23,17 +23,16 @@ export const SIDEBAR_ITEMS: SidebarItemConfig[] = [
       { label: "Projects", to: "/projects" },
       { label: "NFT", to: "/nft" },
       { label: "Job", to: "/job" },
-      { label: "Blog", to: "/blog" },
     ],
   },
   {
-    id: "Apps",
-    title: "Apps",
+    id: "Pages",
+    title: "Pages",
     icon: "apps",
     items: [
-      { label: "Calendar", to: "/calendar" },
-      { label: "Chat", to: "/chat" },
-      { label: "Email", to: "/email" },
+      { label: "Team", to: "/team" },
+      { label: "FAQs", to: "/faqs" },
+      { label: "Privacy", to: "/privacy" },
     ],
   },
 ];
