@@ -12,6 +12,7 @@ import { ArrowUpward } from "./ArrowUpward";
 import { Dollar } from "./Dollar";
 import { ArrowCircleUp } from "./ArrowCircleUp";
 import { ChevronDown } from "./ChevronDown";
+import { AccountCircle } from "./AccountCircle";
 
 export {
   Sun,
@@ -28,4 +29,5 @@ export {
   Dollar,
   ArrowCircleUp,
   ChevronDown,
+  AccountCircle,
 };
