@@ -1,7 +1,9 @@
+import { SearchTeam } from "./sections/Searchteam";
+
 export const Team = () => {
   return (
     <>
-      <h1>Hello teams</h1>
+      <SearchTeam />
     </>
   );
 };

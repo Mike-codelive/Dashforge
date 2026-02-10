@@ -60,7 +60,7 @@ export default function JobStats() {
         return (
           <div
             key={stat.label}
-            className="card-shadow bg-DF-surface dark:bg-DF-bg-dark mb-6 rounded-md p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            className="card-shadow bg-DF-surface dark:bg-DF-bg-dark mb-6 rounded-md p-5 transition hover:-translate-y-0.5 hover:shadow-md"
           >
             <div className="flex items-center gap-4">
               <div
