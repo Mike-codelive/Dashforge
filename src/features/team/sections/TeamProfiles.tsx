@@ -1,12 +1,16 @@
-import { teamMembers } from "../data/teamMembers";
 import { AccountCircle } from "../../../icons";
 import { useSelector } from "react-redux";
 import type { RootState } from "../../../store/store";
+import type { Member } from "../Team";
 
-export default function TeamProfiles() {
+type Props = {
+  members: Member[];
+};
+
+export default function TeamProfiles({ members }: Props) {
   const searchQuery = useSelector((state: RootState) => state.team.searchQuery);
 
-  const filteredMembers = teamMembers.filter((member) =>
+  const filteredMembers = members.filter((member) =>
     member.name.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
@@ -39,6 +43,7 @@ export default function TeamProfiles() {
               </p>
               <p className="text-xs text-gray-500">Projects</p>
             </div>
+
             <div className="bg-DF-nav-search-bg-light dark:bg-DF-nav-search-bg-dark rounded-md py-3 text-center">
               <p className="text-lg font-semibold text-gray-900 dark:text-white">
                 {member.tasks}
