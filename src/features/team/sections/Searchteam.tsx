@@ -1,6 +1,11 @@
 import { AddCircle, Search } from "../../../icons";
+import { useDispatch } from "react-redux";
+import { setSearchQuery } from "../teamSlice";
+import type { AppDispatch } from "../../../store/store";
 
 export const SearchTeam = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
   return (
     <div className="bg-DF-surface dark:bg-DF-bg-dark">
       <div className="card-shadow mb-6 flex justify-between rounded-md p-5">
@@ -9,6 +14,7 @@ export const SearchTeam = () => {
             className="bg-DF-nav-search-bg-light dark:bg-DF-nav-search-bg-dark text-DF-nav-search-text-light dark:text-DF-nav-search-text-dark h-[38px] appearance-none rounded-sm pl-9 focus-visible:ring-1 focus-visible:ring-blue-500/30 focus-visible:outline-none"
             type="text"
             placeholder="Search Team"
+            onChange={(e) => dispatch(setSearchQuery(e.target.value))}
           />
           <div className="pointer-events-none absolute top-0 left-2 flex h-full items-center">
             <Search />

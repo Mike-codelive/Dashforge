@@ -1,10 +1,18 @@
 import { teamMembers } from "../data/teamMembers";
 import { AccountCircle } from "../../../icons";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../../store/store";
 
 export default function TeamProfiles() {
+  const searchQuery = useSelector((state: RootState) => state.team.searchQuery);
+
+  const filteredMembers = teamMembers.filter((member) =>
+    member.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
     <section className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-      {teamMembers.map((member) => (
+      {filteredMembers.map((member) => (
         <div
           key={member.id}
           className="card-shadow bg-DF-surface dark:bg-DF-bg-dark rounded-md p-5"

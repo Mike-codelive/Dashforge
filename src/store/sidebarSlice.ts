@@ -1,4 +1,3 @@
-// store/sidebarSlice.ts
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 type SidebarState = {
