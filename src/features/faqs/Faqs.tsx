@@ -1,7 +1,9 @@
+import FaqsSection from "./sections/FaqsSection";
+
 export const Faqs = () => {
   return (
     <>
-      <h1>Hello Faqs</h1>
+      <FaqsSection />
     </>
   );
 };
